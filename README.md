@@ -9,6 +9,7 @@ the primary dataset used for this project is "Employee.csv" file , containing de
 ### Tools
 - EXCEL
 - PYTHON
+- SQL
 - TABLEAU
 - POWER BI
 ### Data Cleaning 
