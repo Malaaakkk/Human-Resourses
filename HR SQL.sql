@@ -1,6 +1,16 @@
 
 --CLEANING 
 Select* from Employee$;
+-- Remove duplicates 
+With RankedEmployees AS (
+    Select *,
+   Row_Number() over (Partition by EmployeeID Order by EmployeeID) as rn
+    From Employee$
+)
+Delete From RankedEmployees
+Where rn > 1;
+
+
 --Remove extra spaces from the name
 Update Employee$
 Set FirstName = LTRIM(RTRIM(FirstName));
